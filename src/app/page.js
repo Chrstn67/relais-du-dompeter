@@ -1,3 +1,9 @@
+import NavBar from "../../components/Header/navbar";
+
 export default function Page() {
-  return <h1>Hello, Next.js!</h1>;
+  return (
+    <main>
+      <NavBar />
+    </main>
+  );
 }
