@@ -1,7 +1,16 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Link from "next/link";
 
 const Navbar = () => {
+  const [menuVisible, setMenuVisible] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuVisible((previousState) => !previousState);
+    console.log("Menu is now", menuVisible ? "visible" : "hidden");
+  };
+
   return (
     <nav className="shadow">
       <div className="flex justify-between items-center py-6 px-10 container mx-auto">
@@ -11,11 +20,11 @@ const Navbar = () => {
           </h1>
         </div>
 
-        <div>
-          <div className="hover:cursor-pointer sm:hidden">
-            <spnan className="h-1 rounded-full block w-8 mb-1 bg-gradient-to-tr from-indigo-600 to-green-600"></spnan>
-            <spnan className="h-1 rounded-full block w-8 mb-1 bg-gradient-to-tr from-indigo-600 to-green-600"></spnan>
-            <spnan className="h-1 rounded-full block w-8 mb-1 bg-gradient-to-tr from-indigo-600 to-green-600"></spnan>
+        <div onClick={toggleMenu}>
+          <div className="hover:cursor-pointer sm:hidden md:visible">
+            <span className="h-1 rounded-full block w-8 mb-1 bg-gradient-to-tr from-indigo-600 to-green-600"></span>
+            <span className="h-1 rounded-full block w-8 mb-1 bg-gradient-to-tr from-indigo-600 to-green-600"></span>
+            <span className="h-1 rounded-full block w-8 mb-1 bg-gradient-to-tr from-indigo-600 to-green-600"></span>
           </div>
           <div className="flex items-center">
             <ul className="sm:flex space-x-4 hidden items-center">
