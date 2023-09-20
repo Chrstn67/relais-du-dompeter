@@ -26,25 +26,21 @@ const Footer = () => {
     },
   ];
 
-  // Fonction pour gérer le changement de taille d'écran
   const handleResize = () => {
     if (window.innerWidth >= 768) {
-      // Fermer le footer lorsque la largeur de l'écran est supérieure ou égale à 768px
       setFoot(false);
     }
   };
 
-  // Utiliser useEffect pour ajouter un écouteur d'événement de redimensionnement lorsque le composant est monté
   useEffect(() => {
     window.addEventListener("resize", handleResize);
     return () => {
-      // Nettoyer l'écouteur d'événement lorsque le composant est démonté
       window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   return (
-    <div className="fixed bottom-0 w-full bg-gray-900 text-white">
+    <div className="sticky bottom-0 w-full bg-gray-900 text-white">
       <div className="flex justify-between items-center p-3">
         <div>
           <p className="ml-2">Copyright © 2023 - Tous droits réservés</p>
