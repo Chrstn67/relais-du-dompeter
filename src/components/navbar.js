@@ -23,7 +23,7 @@ const Navbar = () => {
     },
     {
       id: 4,
-      link: "Autour de vous",
+      link: "autour de vous",
     },
     {
       id: 5,
