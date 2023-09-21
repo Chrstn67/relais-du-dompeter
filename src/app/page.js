@@ -1,12 +1,12 @@
 import Header from "../components/header";
 import Footer from "../components/footer";
-import Test from "../components/test";
+import Accueil from "../pages/accueil";
 
 export default function Page() {
   return (
     <main>
       <Header />
-      <Test />
+      <Accueil />
       <Footer />
     </main>
   );

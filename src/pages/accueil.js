@@ -4,7 +4,7 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
-const Test = () => {
+const Accueil = () => {
   return (
     <div>
       <p>
@@ -83,4 +83,4 @@ const Test = () => {
   );
 };
 
-export default Test;
+export default Accueil;

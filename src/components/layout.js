@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 
 import Header from "./header";
+import Accueil from "./accueil";
 import Footer from "./footer";
-import Test from "./test";
 
 export default function Layout({ children }) {
   return (
     <>
       <Header />
-      <Test />
+      <Accueil />
       <main>{children}</main>
       <Footer />
     </>
