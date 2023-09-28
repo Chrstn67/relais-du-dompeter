@@ -49,12 +49,14 @@ const Navbar = () => {
 
   return (
     <nav
-      className="bg-black py-4 px-4 fixed bottom-0 w-full border-b border-gray-700"
+      className="bg-black py-4 px-4 border-b border-gray-700"
       style={{
         backgroundImage: `url("./images/cours-accueil.jpg")`,
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center bottom",
         backgroundSize: "auto 110%",
+        position: "relative",
+        zIndex: 1,
       }}
     >
       <div className="container mx-auto flex justify-around items-center bg-black bg-opacity-60 p-1">

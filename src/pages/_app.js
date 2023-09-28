@@ -1,4 +1,4 @@
-import "../app/globals.css";
+import "../app/globals.scss";
 
 export default function MyApp({ Component, pageProps }) {
   const getLayout = Component.getLayout ?? ((page) => page);
