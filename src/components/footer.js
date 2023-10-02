@@ -5,30 +5,30 @@ import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 const Footer = () => {
-  const [footer, setFoot] = useState(false);
+  const [footerOpen, setFooterOpen] = useState(false);
 
   const links = [
     {
       id: 1,
-      link: "mentions légales",
+      link: "Mentions légales",
     },
     {
       id: 2,
-      link: "conditions générales d'utilisation",
+      link: "Conditions générales d'utilisation",
     },
     {
       id: 3,
-      link: "à propos",
-    },
-    {
-      id: 4,
-      link: "réseaux",
+      link: "À propos",
     },
   ];
 
+  const toggleFooter = () => {
+    setFooterOpen(!footerOpen);
+  };
+
   const handleResize = () => {
     if (window.innerWidth >= 768) {
-      setFoot(false);
+      setFooterOpen(false);
     }
   };
 
@@ -39,7 +39,41 @@ const Footer = () => {
     };
   }, []);
 
-  return <div></div>;
+  return (
+    <footer className="bg-black py-4 px-4 border-t border-gray-700 bottom-0 w-full z-50">
+      <div className="container mx-auto flex justify-evenly items-center bg-black bg-opacity-60 p-1">
+        <div className="hidden md:flex space-x-4 items-center">
+          {links.map((linkItem) => (
+            <Link key={linkItem.id} href={`/${linkItem.link}`}>
+              <span className="text-white cursor-pointer flex items-center space-x-2">
+                {linkItem.link}
+              </span>
+            </Link>
+          ))}
+        </div>
+
+        <div className="md:hidden">
+          {footerOpen ? (
+            <FaTimes onClick={toggleFooter} className="text-white text-2xl" />
+          ) : (
+            <FaBars onClick={toggleFooter} className="text-white text-2xl" />
+          )}
+        </div>
+      </div>
+
+      {footerOpen && (
+        <div className="md:hidden flex-col bg-black bg-opacity-40 p-1">
+          {links.map((linkItem) => (
+            <Link key={linkItem.id} href={`/${linkItem.link}`}>
+              <span className="block py-2 px-4 text-white cursor-pointer flex items-center space-x-2">
+                {linkItem.link}
+              </span>
+            </Link>
+          ))}
+        </div>
+      )}
+    </footer>
+  );
 };
 
 export default Footer;
