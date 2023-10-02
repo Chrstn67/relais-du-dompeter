@@ -1,13 +1,9 @@
-import Header from "../components/header";
-import Accueil from "../pages/accueil";
-import Footer from "../components/footer";
+import Link from "next/link";
 
 export default function Page() {
   return (
     <main>
-      <Header />
-      <Accueil />
-      <Footer />
+      <Link href="/accueil"></Link>
     </main>
   );
 }

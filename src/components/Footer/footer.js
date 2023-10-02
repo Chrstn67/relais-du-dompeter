@@ -9,15 +9,15 @@ const Footer = () => {
 
   const links = [
     {
-      id: 1,
+      id: 6,
       link: "Mentions légales",
     },
     {
-      id: 2,
+      id: 7,
       link: "Conditions générales d'utilisation",
     },
     {
-      id: 3,
+      id: 8,
       link: "À propos",
     },
   ];
