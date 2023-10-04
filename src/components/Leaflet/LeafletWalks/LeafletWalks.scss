@@ -1,6 +1,6 @@
-section {
+.walks-map {
   margin: 2rem;
-  padding: 2rem;
+  padding: 1rem;
   background-color: #f9f9f9;
   border-radius: 0.5rem;
 
@@ -8,83 +8,87 @@ section {
     margin: 1rem;
     padding: 1rem;
   }
-
-  .walk-selector {
-    label {
-      font-size: 1.2rem;
-    }
-
-    select {
-      font-size: 1rem;
-      padding: 0.5rem;
-      margin-top: 0.5rem;
-      border: 1px solid #ccc;
-      border-radius: 0.25rem;
-    }
-  }
-
-  .leaflet-container {
-    max-width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 1rem;
-    margin-top: 1rem;
-  }
-
-  .leaflet-popup-content {
-    font-size: 1rem;
-
-    a {
-      color: #0077cc;
-      text-decoration: none;
-      transition: color 0.3s;
-
-      &:hover {
-        color: #005599;
-      }
-    }
-  }
-
-  .walk-details {
-    font-size: 1rem;
-    padding: 1rem;
-
+  h2 {
     text-align: center;
+    font-size: 2em;
+  }
+}
 
-    h2 {
-      font-size: 2rem;
+.walk-selector {
+  label {
+    font-size: 1.2rem;
+  }
+
+  select {
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+  }
+}
+
+.leaflet-container {
+  max-width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  margin-top: 1rem;
+}
+
+.leaflet-popup-content {
+  font-size: 1rem;
+
+  a {
+    color: #0077cc;
+    text-decoration: none;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #005599;
     }
+  }
+}
+
+.walk-details {
+  font-size: 1rem;
+  padding: 1rem;
+
+  text-align: center;
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1em;
+
+    span {
+      font-size: 1.1rem;
+    }
+  }
+
+  h4 {
+    margin-top: 1em;
+    font-size: 1.2rem;
+    color: #008000;
+  }
+
+  .danger {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     p {
-      font-size: 1em;
-
-      span {
-        font-size: 1.1rem;
-      }
+      font-size: 1rem;
+      margin: 0.5rem 0;
+      font-weight: 700;
+      justify-content: space-between;
     }
 
-    h4 {
-      margin-top: 1em;
-      font-size: 1.2rem;
-      color: #008000;
-    }
-
-    .danger {
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      p {
-        font-size: 1rem;
-        margin: 0.5rem 0;
-        font-weight: 700;
-        justify-content: space-between;
-      }
-
-      img {
-        width: auto;
-        height: auto;
-      }
+    img {
+      width: auto;
+      height: auto;
     }
   }
 }

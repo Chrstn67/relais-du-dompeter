@@ -218,8 +218,8 @@ const WalksMap = () => {
 
   return (
     <section className="walks-map">
+      <h2>Sentiers</h2>
       <div className="walk-selector">
-        <label>Sélectionnez un sentier : </label>
         <select onChange={(e) => handleWalkSelect(e.target.value)}>
           <option value="">Sélectionnez un sentier</option>
           {walks.map((walk, index) => (

@@ -317,16 +317,8 @@ const LeafletTown = () => {
 
   return (
     <>
-      <section className="intro-page">
-        <h2>Autour de vous</h2>
-        <p>
-          Allez visiter ces endroits touristiques, historiques ou de loisirs !{" "}
-          <br />
-          Partez à la découverte des plaines alsaciennes et savourez vos pauses
-          en dégustant nos spécialités régionales !
-        </p>
-      </section>
       <section className="info-carte">
+        <h2>À visiter</h2>
         <MapContainer
           center={mapCenter}
           zoom={13}
