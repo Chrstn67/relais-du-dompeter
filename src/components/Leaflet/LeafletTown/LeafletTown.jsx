@@ -244,6 +244,19 @@ const LeafletTown = () => {
       description:
         "https://www.auberge-bruche.com/fr/restaurant-auberge-bruche-cuisine-gastronomique",
     },
+    {
+      name: "Stade de la Meinau (Racing Club de Strasbourg Alsace)",
+      coordinates: [48.5600477, 7.755125193344087],
+      type: "Sport",
+      description: "https://www.rcstrasbourgalsace.fr/",
+    },
+    {
+      name: "Sentier des Casemates",
+      coordinates: [48.571529, 7.484089],
+      type: "Rando",
+      description:
+        "https://www.soultz-les-bains.fr/decouvrir/sentier-casemates.htm",
+    },
   ];
 
   const iconMappings = {
@@ -288,8 +301,12 @@ const LeafletTown = () => {
       iconUrl: "https://cdn-icons-png.flaticon.com/512/5766/5766813.png",
       iconSize: [38, 38],
     },
+    Sport: {
+      iconUrl: "https://cdn-icons-png.flaticon.com/512/147/147215.png",
+      iconSize: [38, 38],
+    },
     Rando: {
-      iconUrl: "   https://cdn-icons-png.flaticon.com/512/805/805484.png",
+      iconUrl: "https://cdn-icons-png.flaticon.com/512/566/566499.png",
       iconSize: [38, 38],
     },
   };

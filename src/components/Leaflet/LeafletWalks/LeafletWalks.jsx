@@ -11,11 +11,13 @@ import {
 import "leaflet/dist/leaflet.css";
 import { Icon } from "leaflet";
 import { FaHiking } from "react-icons/fa";
-
+import MarkerClusterGroup from "react-leaflet-cluster";
+// import "react-leaflet-markercluster/dist/styles.min.css";
 import "./LeafletWalks.scss";
 
 const WalksMap = () => {
   const [mapCenter, setMapCenter] = useState([48.5613977, 7.5024652]);
+  const [selectedWalk, setSelectedWalk] = useState(null);
 
   const townMarker = [
     {
@@ -24,13 +26,12 @@ const WalksMap = () => {
       type: "Hotel",
       description: "Votre pied-à-terre",
     },
-    // Ajoutez d'autres marqueurs de ville si nécessaire
   ];
 
   const walks = [
     {
       name: "Sentier des Casemates",
-      type: "Rando",
+
       coordinates: [
         [48.57155275318671, 7.483991862648036],
         [48.57176652005406, 7.483060984197014],
@@ -61,35 +62,42 @@ const WalksMap = () => {
         [48.56641478720442, 7.472072666593432],
         [48.56616577390774, 7.471540244814947],
         [48.5659101147691, 7.470904132421527],
-        [48.56561502282374, 7.470254184572626],
-        [48.56543142681492, 7.469668286112638],
-        [48.56500509952723, 7.469352550448964],
-        [48.56462522071134, 7.468840994578181],
-        [48.56426650636475, 7.468201619074939],
-        [48.56392871821222, 7.467559590991062],
-        [48.56351845700026, 7.466759821006084],
-        [48.56327736005116, 7.466057712441496],
-        [48.56279622330286, 7.465392497878282],
-        [48.56263973848787, 7.46513890889579],
-        [48.56271300835456, 7.464965009028623],
-        [48.56249377786051, 7.464380458226481],
-        [48.56219048536324, 7.463906744509707],
-        [48.56180168468691, 7.463210818702805],
-        [48.56160343432443, 7.462531322896064],
-        [48.56135238326183, 7.461851626189726],
-        [48.56139502164891, 7.461394245870667],
-        [48.56140449386372, 7.461108374033325],
-        [48.56103599493831, 7.460836530221244],
-        [48.56068052437436, 7.460584155922225],
-        [48.56042055870351, 7.46009613331448],
-        [48.56014405731673, 7.459677372691981],
-        [48.55994792005793, 7.459367386960858],
-        [48.55953833838717, 7.459023188124685],
-        [48.55502230644851, 7.459808934740916],
-        [48.55448993478678, 7.46049433873144],
-        [48.55388337576274, 7.461298304454616],
-        [48.55333721909565, 7.462045079670581],
-        [48.55293855735919, 7.462751532036447],
+        [48.56576719983694, 7.470603153982555],
+        [48.56553897213812, 7.470431633595043],
+        [48.56535559552089, 7.470208626194916],
+        [48.5651665508316, 7.470053086567258],
+        [48.56492846410934, 7.469898538273796],
+        [48.56465647795851, 7.469741933574287],
+        [48.56426679878207, 7.469486026292342],
+        [48.56392980881548, 7.469225696576498],
+        [48.56363163598667, 7.468915127082036],
+        [48.56321603053252, 7.468312646841079],
+        [48.56288948187579, 7.467735001680975],
+        [48.5624195747238, 7.46697618029385],
+        [48.56196193725157, 7.466240521580103],
+        [48.56177420802611, 7.465699558178609],
+        [48.56164255764525, 7.465108487568672],
+        [48.56124856297363, 7.464723619573759],
+        [48.56096995951214, 7.463890984204406],
+        [48.56059877169866, 7.462824876463099],
+        [48.56039085683434, 7.462287378937851],
+        [48.56013301903712, 7.461739305905093],
+        [48.55957068785364, 7.462590005551339],
+        [48.55910485172032, 7.463036505339402],
+        [48.55842808566346, 7.463820096996123],
+        [48.55760624536948, 7.464334459710384],
+        [48.5569185185218, 7.464404331809491],
+        [48.55645890862279, 7.463753048730084],
+        [48.5559360463546, 7.463211864520818],
+        [48.5553287552416, 7.462649451048264],
+        [48.55499108849325, 7.462547632510324],
+        [48.55468615680977, 7.462078305937139],
+        [48.55440164128589, 7.461372744596606],
+        [48.55414029067452, 7.460863317488988],
+        [48.55397420440688, 7.461029672657209],
+        [48.553773365883, 7.461400930011008],
+        [48.5534986334504, 7.461868606052942],
+        [48.55311569336627, 7.462507491531223],
         [48.55244817453613, 7.463283709833917],
         [48.55209939007483, 7.463420005566038],
         [48.55197466827122, 7.463498021897552],
@@ -98,7 +106,7 @@ const WalksMap = () => {
         [48.55218235513397, 7.465642336944079],
         [48.55293725748922, 7.466439146872997],
         [48.55399234440106, 7.467849714916806],
-        [48.55465049703017, 7.468890926205834],
+        [48.55465049703016, 7.468890926205834],
         [48.55587261915498, 7.470040890176501],
         [48.55659592820074, 7.470472439401656],
         [48.55799215441185, 7.471298307026544],
@@ -126,10 +134,18 @@ const WalksMap = () => {
         [48.57116083961024, 7.484410550902583],
         [48.57155275318671, 7.483991862648036],
       ],
+
       description:
-        "Suivez le sentier des Casemates, vestiges de la Première Guerre Mondiale",
+        "Parcourez 6 kilomètres sur le sentier des Casemates, où vous trouverez des vestiges de la Première Guerre Mondiale.",
       startIcon: "Start",
       endIcon: "End",
+      denivele: "180 mètres",
+      infoSentier: {
+        effort: "images_effort/denivele_2.png",
+        technique: "images_technique/technique_2.png",
+        risque: "images_risque/risque_2.png",
+      },
+
       attractions: [
         {
           name: "Point de vue sur le Kochersberg",
@@ -150,15 +166,22 @@ const WalksMap = () => {
     },
   ];
 
-  const [selectedWalk, setSelectedWalk] = useState(null);
-
-  const handleWalkSelect = (walk) => {
+  const handleWalkSelect = (walkName) => {
     // Effacez la sélection précédente
     setSelectedWalk(null);
 
+    // Trouvez le sentier sélectionné par son nom
+    const selectedWalk = walks.find((walk) => walk.name === walkName);
+
     // Mettez à jour la nouvelle sélection
-    if (walk !== "null") {
-      setSelectedWalk(walk);
+    if (selectedWalk) {
+      setSelectedWalk(selectedWalk);
+
+      // Obtenez les coordonnées du point de départ du sentier
+      const startPoint = selectedWalk.coordinates[0];
+
+      // Mettez à jour la position centrale pour centrer la carte sur le point de départ du sentier
+      setMapCenter(startPoint);
     }
   };
 
@@ -167,10 +190,7 @@ const WalksMap = () => {
       iconUrl: "https://cdn-icons-png.flaticon.com/512/675/675942.png",
       iconSize: [38, 38],
     },
-    Rando: {
-      iconUrl: "https://cdn-icons-png.flaticon.com/512/805/805484.png",
-      iconSize: [38, 38],
-    },
+
     Start: {
       iconUrl: "https://cdn-icons-png.flaticon.com/512/495/495530.png",
       iconSize: [38, 38],
@@ -201,7 +221,7 @@ const WalksMap = () => {
       <div className="walk-selector">
         <label>Sélectionnez un sentier : </label>
         <select onChange={(e) => handleWalkSelect(e.target.value)}>
-          <option value="null">Sélectionnez un sentier</option>
+          <option value="">Sélectionnez un sentier</option>
           {walks.map((walk, index) => (
             <option key={index} value={walk.name}>
               {walk.name}
@@ -218,54 +238,70 @@ const WalksMap = () => {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         />
-        {townMarker.map((marker, index) => (
-          <Marker
-            key={index}
-            position={marker.coordinates}
-            icon={getCustomIcon(marker.type)}
-          >
-            <Popup>{marker.name}</Popup>
-          </Marker>
-        ))}
-        {walks.map((walk, index) => (
-          <Polyline
-            key={index}
-            positions={walk.coordinates}
-            color={selectedWalk === walk ? "red" : "blue"}
-            onClick={() => handleWalkClick(walk)}
-          />
-        ))}
-        {walks.map((walk) => (
-          <>
+        <MarkerClusterGroup>
+          {townMarker.map((marker, index) => (
             <Marker
-              position={walk.coordinates[0]} // Utilisez le premier point comme position du marqueur de départ
-              icon={getCustomIcon(walk.startIcon)}
+              key={index}
+              position={marker.coordinates}
+              icon={getCustomIcon(marker.type)}
             >
-              <Popup>Départ</Popup>
+              <Popup>{marker.name}</Popup>
             </Marker>
-            <Marker
-              position={walk.coordinates[walk.coordinates.length - 1]} // Utilisez le dernier point comme position du marqueur d'arrivée
-              icon={getCustomIcon(walk.endIcon)}
-            >
-              <Popup>Arrivée</Popup>
-            </Marker>
-            {walk.attractions.map((attraction, index) => (
+          ))}
+          {selectedWalk && (
+            <>
+              <Polyline positions={selectedWalk.coordinates} color="red" />
               <Marker
-                key={index}
-                position={attraction.coordinates}
-                icon={getCustomIcon(attraction.icon)}
+                position={selectedWalk.coordinates[0]}
+                icon={getCustomIcon(selectedWalk.startIcon)}
               >
-                <Popup>{attraction.name}</Popup>
+                <Popup>Départ</Popup>
               </Marker>
-            ))}
-          </>
-        ))}
+              <Marker
+                position={
+                  selectedWalk.coordinates[selectedWalk.coordinates.length - 1]
+                }
+                icon={getCustomIcon(selectedWalk.endIcon)}
+              >
+                <Popup>Arrivée</Popup>
+              </Marker>
+              {selectedWalk.attractions.map((attraction, index) => (
+                <Marker
+                  key={index}
+                  position={attraction.coordinates}
+                  icon={getCustomIcon(attraction.icon)}
+                >
+                  <Popup>{attraction.name}</Popup>
+                </Marker>
+              ))}
+            </>
+          )}
+        </MarkerClusterGroup>
       </MapContainer>
       {selectedWalk && (
-        <div className="walk-details">
+        <section className="walk-details">
           <h2>{selectedWalk.name}</h2>
           <p>{selectedWalk.description}</p>
-        </div>
+
+          <h4>Infos sur le sentier:</h4>
+          <p>
+            Dénivelé: <span>{selectedWalk.denivele}</span>
+          </p>
+          <div className="danger">
+            <p>
+              Effort:
+              <img src={selectedWalk.infoSentier.effort} alt="Effort" />
+            </p>
+            <p>
+              Technique:
+              <img src={selectedWalk.infoSentier.technique} alt="Technique" />
+            </p>
+            <p>
+              Risque:
+              <img src={selectedWalk.infoSentier.risque} alt="Risque" />
+            </p>
+          </div>
+        </section>
       )}
     </section>
   );

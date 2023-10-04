@@ -1,4 +1,4 @@
-section {
+.walks-map {
   margin: 2rem;
   padding: 2rem;
   background-color: #f9f9f9;
@@ -8,20 +8,19 @@ section {
     margin: 1rem;
     padding: 1rem;
   }
-}
 
-.info-rando {
-  background-color: #f0f0f0;
-  padding: 2rem;
+  .walk-selector {
+    label {
+      font-size: 1.2rem;
+    }
 
-  h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-
-  p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
+    select {
+      font-size: 1rem;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 0.25rem;
+    }
   }
 
   .leaflet-container {
@@ -43,6 +42,50 @@ section {
 
       &:hover {
         color: #005599;
+      }
+    }
+  }
+
+  .walk-details {
+    font-size: 1rem;
+    padding: 1rem;
+
+    text-align: center;
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1em;
+
+      span {
+        font-size: 1.1rem;
+      }
+    }
+
+    h4 {
+      margin-top: 1em;
+      font-size: 1.2rem;
+      color: #008000;
+    }
+
+    .danger {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      p {
+        font-size: 1rem;
+        margin: 0.5rem 0;
+        font-weight: 700;
+        justify-content: space-between;
+      }
+
+      img {
+        width: auto;
+        height: auto;
       }
     }
   }
