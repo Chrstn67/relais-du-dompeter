@@ -1,7 +1,7 @@
 import LeafletTown from "../../../components/Leaflet/LeafletTown/LeafletTown";
 import LeafletWalks from "../../../components/Leaflet/LeafletWalks/LeafletWalks";
 
-export default function Header({ children }) {
+export default function Autour({ children }) {
   return (
     <div>
       <LeafletTown />

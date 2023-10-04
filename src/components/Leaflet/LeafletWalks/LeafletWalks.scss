@@ -1,4 +1,4 @@
-.walks-map {
+section {
   margin: 2rem;
   padding: 2rem;
   background-color: #f9f9f9;
@@ -24,8 +24,6 @@
   }
 
   .leaflet-container {
-    height: 60vh;
-    width: 100%;
     max-width: 100%;
     border: 1px solid #ccc;
     border-radius: 1rem;
