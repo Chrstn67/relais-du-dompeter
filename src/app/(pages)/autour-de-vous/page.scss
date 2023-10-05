@@ -38,7 +38,7 @@
     position: relative;
     width: 80%;
     padding: 1rem;
-    background-color: #fff;
+    background-color: #d4eaf1;
     border-radius: 0.5rem;
     margin: 1rem 0;
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
@@ -52,26 +52,35 @@
     }
 
     &:hover {
-      transform: scale(1.05);
+      transform: scale(1.03);
+      background-color: #00f7ffde;
     }
 
     h3 {
       font-family: "Times New Roman", Times, serif;
-      font-size: 1.5rem;
+      font-size: 2rem;
       color: #612727;
       margin-bottom: 0.5rem;
+    }
+    a {
+      color: #000e55;
+      background-color: #f9f9f9;
+      padding: 0.2em;
+      &:hover {
+        text-decoration: underline;
+      }
     }
 
     p {
       font-family: "Times New Roman", Times, serif;
-      font-size: 1rem;
+      font-size: 1.1rem;
       color: #333;
       line-height: 1.4;
     }
     img {
       width: auto;
       height: auto;
-      border-radius: 30%;
+      border-radius: 10%;
     }
   }
 }

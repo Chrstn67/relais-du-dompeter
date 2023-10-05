@@ -18,7 +18,7 @@ const LeafletTown = () => {
 
   const townMarker = [
     {
-      name: "Avolsheim",
+      name: "2, rue du Dompeter 67120 Avolsheim",
       coordinates: [48.5613977, 7.5024652],
       type: "Hotel",
       description: "Relais du Dompeter",

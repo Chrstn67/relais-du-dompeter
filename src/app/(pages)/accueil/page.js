@@ -50,6 +50,8 @@ const Accueil = () => {
           <li>Mariages</li>
           <li>Receptions</li>
           <li>Séminaires</li>
+          <li>Nuitées</li>
+          <li>Séjours</li>
         </ul>
       </section>
     </>
