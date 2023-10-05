@@ -84,3 +84,92 @@
     }
   }
 }
+
+.transports-trajets {
+  margin: 2rem;
+  padding: 1rem;
+  text-align: center;
+  background-color: #f9f9f9;
+
+  h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 1em;
+  }
+
+  .velo,
+  .bus {
+    margin-bottom: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    svg {
+      font-size: 2em;
+      color: #000e55;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin: 1em;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    h4 {
+      font-size: 1.5em;
+      color: #333;
+      margin-bottom: 1em;
+    }
+
+    form {
+      margin-bottom: 1em;
+
+      label {
+        display: block;
+        margin-bottom: 0.5em;
+
+        span {
+          font-size: 1.2em;
+          color: #333;
+          margin-right: 0.5em;
+        }
+
+        select {
+          background-color: #cac2c2;
+          font-size: 1rem;
+          padding: 0.5em;
+          outline: 1px solid #ccc;
+          border-radius: 0.3em;
+        }
+      }
+
+      button {
+        font-size: 1rem;
+        padding: 0.5em 1em;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 0.3em;
+        cursor: pointer;
+      }
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 1em;
+      background-color: #5555d6;
+
+      li {
+        font-size: 1.2rem;
+        color: #fff;
+
+        padding: 0.3em;
+      }
+    }
+  }
+}

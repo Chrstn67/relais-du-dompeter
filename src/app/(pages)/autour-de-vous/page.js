@@ -1,7 +1,11 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import LeafletTown from "../../../components/Leaflet/LeafletTown/LeafletTown";
 import LeafletWalks from "../../../components/Leaflet/LeafletWalks/LeafletWalks";
 import "./page.scss";
+import { IoMdBicycle } from "react-icons/io";
+import { BiSolidBus } from "react-icons/bi";
 
 const Festivites = () => {
   const festivitesData = [
@@ -10,7 +14,7 @@ const Festivites = () => {
       lieu: "Molsheim",
       date: "Mai",
       description:
-        "Molsheim devient la capitale de la Cox ! Des centaines de celèbres 'Coccinelles' envahissent la ville le temps d'un week-end ! Venez les voir ! ",
+        "Molsheim devient la capitale de la Cox ! Des centaines de célèbres 'Coccinelles' envahissent la ville le temps d'un week-end ! Venez les voir ! ",
       image: "images_festivites/coxshow.jpg",
       site: "https://www.facebook.com/CoxShow",
     },
@@ -37,13 +41,97 @@ const Festivites = () => {
       lieu: "Molsheim",
       date: "Du Vendredi au Dimanche, le 3ème week-end de Septembre",
       description:
-        "Le Festival Bugatti attire chaque années des milliers de touristes et amateurs d'automobiles. Venez découvir l'histoire fabuleuse de ces voitures rares et exceptionnelles !",
+        "Le Festival Bugatti attire chaque année des milliers de touristes et amateurs d'automobiles. Venez découvrir l'histoire fabuleuse de ces voitures rares et exceptionnelles !",
       image: "images_festivites/festival_bugatti.jpg",
       site: "https://www.enthousiastes-bugatti-alsace.com/",
     },
-
     // Ajoutez d'autres festivités avec leurs informations
   ];
+
+  const [departure, setDeparture] = useState("");
+  const [destination, setDestination] = useState("");
+  const [busOptions, setBusOptions] = useState([]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Ajoutez ici la logique de recherche pour les trajets en bus en fonction de la destination sélectionnée
+    // Par exemple, si vous avez une liste prédéfinie de trajets en bus, filtrez-la en fonction de la destination sélectionnée
+    // Exemple de logique de recherche de trajets en bus (à personnaliser en fonction de vos besoins) :
+    const busRoutes = [
+      {
+        departure: "Avolsheim",
+        destination: "Molsheim",
+        trajet: "Avolsheim-Molsheim",
+      },
+      {
+        departure: "Molsheim",
+        destination: "Avolsheim",
+        trajet: "Molsheim-Avolsheim",
+      },
+      {
+        departure: "Avolsheim",
+        destination: "Strasbourg",
+        trajet: "Avolsheim-Marlenheim puis Marlenheim-Strasbourg",
+      },
+      {
+        departure: "Molsheim",
+        destination: "Strasbourg",
+        trajet: "Molsheim-Marlenheim puis Marlenheim-Strasbourg",
+      },
+      {
+        departure: "Strasbourg",
+        destination: "Molsheim",
+        trajet: "Starsbourg-Marlenheim puis Marlenheim-Molsheim",
+      },
+      {
+        departure: "Strasbourg",
+        destination: "Avolsheim",
+        trajet: "Starsbourg-Marlenheim puis Marlenheim-Avolsheim",
+      },
+      {
+        departure: "Avolsheim",
+        destination: "Saverne",
+        trajet: "Avolsheim-Wasselone puis Wasselone-Saverne",
+      },
+      {
+        departure: "Saverne",
+        destination: "Avolsheim",
+        trajet: "Saverne-Wasselonne puis Wasselone-Avolsheim",
+      },
+
+      {
+        departure: "Molsheim",
+        destination: "Saverne",
+        trajet: "Molsheim-Wasselone puis Wasselone-Saverne",
+      },
+      {
+        departure: "Saverne",
+        destination: "Molsheim",
+        trajet: "Saverne-Wasselonne puis Wasselone-Molsheim",
+      },
+
+      {
+        departure: "Saverne",
+        destination: "Strasbourg",
+        trajet:
+          "Saverne-Wasselonne puis Wasselone-Marlenheim puis Marlenheim-Strasbourg",
+      },
+      {
+        departure: "Starsbourg",
+        destination: "Saverne",
+        trajet:
+          "Starsbourg-Marlenheim puis Marlenheim-Wasselone puis Wasselonne-Saverne",
+      },
+      // Ajoutez d'autres trajets en bus ici
+    ];
+
+    const filteredRoutes = busRoutes.filter(
+      (route) =>
+        route.departure === departure && route.destination === destination
+    );
+
+    setBusOptions(filteredRoutes);
+  };
 
   return (
     <>
@@ -56,6 +144,68 @@ const Festivites = () => {
           en dégustant nos spécialités régionales !
         </p>
       </section>
+      <section className="transports-trajets">
+        <h3>Renseignements trajets/transport</h3>
+        <div className="velo">
+          <IoMdBicycle />
+          <p>
+            L'Alsace est l'une des régions les plus cyclables de France ! Venez
+            découvrir la région sur des pistes cyclables entretenues et
+            sécurisées.
+            <br />
+            Du Relais, partez en direction des villes de Molsheim, Obernai,
+            Saverne ou Starsbourg, en passant par des villages uniques sur des
+            pistes à votre disposition pour votre plus grand plaisir !
+          </p>
+        </div>
+        <div className="bus">
+          <BiSolidBus />
+          <p>
+            Si vous ne souhaitez pas prendre la voiture, vous avez l'option du
+            bus. Des lignes sont mises à votre disposition pour vous permettre
+            de voyager en toute sécurité.
+          </p>
+          <div>
+            <h4>Trajet en bus</h4>
+            <form onSubmit={handleSubmit}>
+              <label>
+                <span>De</span>
+                <select
+                  value={departure}
+                  onChange={(e) => setDeparture(e.target.value)}
+                >
+                  <option value="">Sélectionnez une commune de départ</option>
+                  <option value="Avolsheim">Avolsheim</option>
+                  <option value="Molsheim">Molsheim</option>
+                  <option value="Strasbourg">Strasbourg</option>
+                  <option value="Saverne">Saverne</option>
+                </select>
+              </label>
+              <label>
+                <span>À</span>
+                <select
+                  value={destination}
+                  onChange={(e) => setDestination(e.target.value)}
+                >
+                  <option value="">
+                    Sélectionnez une commune de destination
+                  </option>
+                  <option value="Avolsheim">Avolsheim</option>
+                  <option value="Molsheim">Molsheim</option>
+                  <option value="Strasbourg">Strasbourg</option>
+                  <option value="Saverne">Saverne</option>
+                </select>
+              </label>
+              <button type="submit">Rechercher</button>
+            </form>
+            <ul>
+              {busOptions.map((option, index) => (
+                <li key={index}>{option.trajet}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
       <section>
         <LeafletTown />
         <LeafletWalks />
@@ -63,8 +213,8 @@ const Festivites = () => {
       <section className="festivites">
         <h2>Festivités</h2>
         <p>
-          Toute l&#39;année est ponctuée de festivités que vous ne trouverez
-          nulle part ailleurs !
+          Toute l'année est ponctuée de festivités que vous ne trouverez nulle
+          part ailleurs !
           <br />
           Venez vous délecter du patrimoine culturel alsacien !
         </p>
@@ -77,17 +227,16 @@ const Festivites = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Plus d&#39;infos
+                Plus d'infos
               </a>
               <p>
-                <strong>Date :</strong> {festivite.date}{" "}
+                <strong>Date :</strong> {festivite.date}
               </p>
               <p>
                 <strong>Lieu :</strong> {festivite.lieu}
               </p>
               <p>{festivite.description}</p>
               <img src={festivite.image} alt={festivite.name} />
-              {/* Ajout de src et alt pour la balise img */}
             </div>
           ))}
         </div>

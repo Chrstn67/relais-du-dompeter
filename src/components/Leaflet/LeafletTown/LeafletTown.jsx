@@ -37,6 +37,36 @@ const LeafletTown = () => {
         "https://www.garesetconnexions.sncf/fr/gares-services/molsheim",
     },
     {
+      name: "Arrêt Molsheim Gare",
+      coordinates: [48.536981, 7.500851],
+      type: "Bus",
+      description: "https://www.fluo.eu/",
+    },
+    {
+      name: "Arrêt Avolsheim Route des Vins",
+      coordinates: [48.560509, 7.497914],
+      type: "Bus",
+      description: "https://www.fluo.eu/",
+    },
+    {
+      name: "Arrêt Marlenheim Colombes",
+      coordinates: [48.619977, 7.499966],
+      type: "Bus",
+      description: "https://www.fluo.eu/",
+    },
+    {
+      name: "Arrêt Wasselone Route de Romanswiller",
+      coordinates: [48.638078, 7.440023],
+      type: "Bus",
+      description: "https://www.fluo.eu/",
+    },
+    {
+      name: "Arrêt Saverne Lycée Jules Verne",
+      coordinates: [48.732238, 7.373505],
+      type: "Bus",
+      description: "https://www.fluo.eu/",
+    },
+    {
       name: "Saverne",
       coordinates: [48.7419909, 7.3625953],
       type: "Ville",
@@ -270,6 +300,10 @@ const LeafletTown = () => {
     },
     Gare: {
       iconUrl: "https://cdn-icons-png.flaticon.com/512/4011/4011240.png",
+      iconSize: [38, 38],
+    },
+    Bus: {
+      iconUrl: "https://cdn-icons-png.flaticon.com/512/9830/9830663.png",
       iconSize: [38, 38],
     },
     Aéroport: {

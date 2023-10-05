@@ -15,34 +15,6 @@ import {
 const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
 
-  const links = [
-    {
-      id: 1,
-      link: "Accueil",
-      icon: <FaHome />,
-    },
-    {
-      id: 2,
-      link: "Réserver",
-      icon: <FaCalendar />,
-    },
-    {
-      id: 3,
-      link: "Infos pratiques",
-      icon: <FaInfo />,
-    },
-    {
-      id: 4,
-      link: "Autour de vous",
-      icon: <FaMap />,
-    },
-    {
-      id: 5,
-      link: "Contact",
-      icon: <FaEnvelope />,
-    },
-  ];
-
   const toggleNav = () => {
     setNavOpen(!navOpen);
   };
@@ -63,14 +35,36 @@ const Navbar = () => {
         <h1 className="text-white text-3xl font-bold">Relais du Dompeter</h1>
 
         <div className="hidden md:flex space-x-4 items-center">
-          {links.map((linkItem) => (
-            <Link key={linkItem.id} href={`/${linkItem.link}`}>
-              <span className="text-white cursor-pointer flex items-center space-x-2">
-                {linkItem.icon}
-                <span>{linkItem.link}</span>
-              </span>
-            </Link>
-          ))}
+          <Link href="/accueil">
+            <span className="text-white cursor-pointer flex items-center space-x-2">
+              <FaHome />
+              <span>Accueil</span>
+            </span>
+          </Link>
+          <Link href="/les-logements">
+            <span className="text-white cursor-pointer flex items-center space-x-2">
+              <FaCalendar />
+              <span>Logements</span>
+            </span>
+          </Link>
+          <Link href="/infos-pratiques">
+            <span className="text-white cursor-pointer flex items-center space-x-2">
+              <FaInfo />
+              <span>Infos pratiques</span>
+            </span>
+          </Link>
+          <Link href="/autour-de-vous">
+            <span className="text-white cursor-pointer flex items-center space-x-2">
+              <FaMap />
+              <span>Autour de vous</span>
+            </span>
+          </Link>
+          <Link href="/contact">
+            <span className="text-white cursor-pointer flex items-center space-x-2">
+              <FaEnvelope />
+              <span>Contact</span>
+            </span>
+          </Link>
         </div>
 
         <div className="md:hidden ">
@@ -84,14 +78,36 @@ const Navbar = () => {
 
       {navOpen && (
         <div className="md:hidden flex-col bg-black bg-opacity-40 p-1">
-          {links.map((linkItem) => (
-            <Link key={linkItem.id} href={`/${linkItem.link}`}>
-              <span className="block py-2 px-4 text-white cursor-pointer flex items-center space-x-2">
-                {linkItem.icon}
-                <span>{linkItem.link}</span>
-              </span>
-            </Link>
-          ))}
+          <Link href="/accueil">
+            <span className="block py-2 px-4 text-white cursor-pointer flex items-center space-x-2">
+              <FaHome />
+              <span>Accueil</span>
+            </span>
+          </Link>
+          <Link href="/les-logements">
+            <span className="block py-2 px-4 text-white cursor-pointer flex items-center space-x-2">
+              <FaCalendar />
+              <span>Logements</span>
+            </span>
+          </Link>
+          <Link href="/infos-pratiques">
+            <span className="block py-2 px-4 text-white cursor-pointer flex items-center space-x-2">
+              <FaInfo />
+              <span>Infos pratiques</span>
+            </span>
+          </Link>
+          <Link href="/autour-de-vous">
+            <span className="block py-2 px-4 text-white cursor-pointer flex items-center space-x-2">
+              <FaMap />
+              <span>Autour de vous</span>
+            </span>
+          </Link>
+          <Link href="/contact">
+            <span className="block py-2 px-4 text-white cursor-pointer flex items-center space-x-2">
+              <FaEnvelope />
+              <span>Contact</span>
+            </span>
+          </Link>
         </div>
       )}
     </nav>

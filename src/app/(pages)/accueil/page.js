@@ -24,12 +24,17 @@ const Accueil = () => {
           </p>
           <p>
             Accompagnées de vos amis, de votre famille et de vos enfants, venez
-            découvrire et déguster nos trésors culinaires traditionnels,
-            assortis de grands crus d&#39;Alsace.
+            découvrir et déguster nos trésors culinaires traditionnels, assortis
+            de grands crus d&#39;Alsace.
           </p>
           <p>
             Venez faire un &#39;relais&#39; dans notre relais où je me ferais un
             plaisir de vous accueillir et de vous assurer des jours agréables.
+          </p>
+          <p>
+            Situé à 25 kilomètres de Strasbourg et 3 kilomètres de Molsheim, ce
+            qui sera votre lieu de séjour préféré est parfaitement palcé de
+            manière à vous assurer des déplacements des plus faciles !
           </p>
           <p>Mon souhait ? Que votre rêve Alsacien devienne une réalité !</p>
           <p className="signature">Marie-Jo Brucker</p>
@@ -43,6 +48,7 @@ const Accueil = () => {
           </picture>
         </div>
       </section>
+
       <section className="services">
         <h2>Services</h2>
         <p>Joignez l&#39;utile à l&#39;agréable !</p>

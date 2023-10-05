@@ -1,0 +1,34 @@
+"use client";
+
+import React from "react";
+import "./page.scss";
+
+const Logements = () => {
+  return (
+    <>
+      <section className="logement-1">
+        <h2>Besoin de renseignements supplémentaires ?</h2>
+        <p>Vous avez des questions ou des préoccupations ? Contactez-moi !.</p>
+      </section>
+      <section className="contact-info">
+        <h2>Informations de contact</h2>
+
+        <p>
+          <span>Adresse: </span> <br /> 2, Rue du Dompeter 67120 AVOLSHEIM
+        </p>
+        <p>
+          <span>Téléphone:</span> <br />{" "}
+          <a href="tel:06XXXXXXXX">06 XX XX XX XX</a>
+        </p>
+        <p>
+          <span>Email:</span> <br />
+          <a href="mailto:le-relais-du-dompeter@test.com">
+            le-relais-du-dompeter@test.com
+          </a>
+        </p>
+      </section>
+    </>
+  );
+};
+
+export default Logements;
