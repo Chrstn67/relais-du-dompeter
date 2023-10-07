@@ -41,7 +41,7 @@ const Navbar = () => {
               <span>Accueil</span>
             </span>
           </Link>
-          <Link href="/les-logements">
+          <Link href="/logements">
             <span className="text-white cursor-pointer flex items-center space-x-2">
               <FaCalendar />
               <span>Logements</span>
@@ -84,7 +84,7 @@ const Navbar = () => {
               <span>Accueil</span>
             </span>
           </Link>
-          <Link href="/les-logements">
+          <Link href="/logements">
             <span className="block py-2 px-4 text-white cursor-pointer flex items-center space-x-2">
               <FaCalendar />
               <span>Logements</span>
