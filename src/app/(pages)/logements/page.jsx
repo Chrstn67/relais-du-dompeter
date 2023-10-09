@@ -12,7 +12,7 @@ const Logements = () => {
   const logementsData = [
     {
       id: 1,
-      titre: "Logement 3",
+      titre: "Logement n°3",
       description: "Duplex 70m², pour 4 personnes",
       caracteristiquesGenerales: [
         "Coin repos 5 places",
@@ -55,10 +55,10 @@ const Logements = () => {
 
     {
       id: 2,
-      titre: "Logement 4",
+      titre: "Logement n°4",
       description: "Duplex 75m², pour 5 personnes",
       caracteristiquesGenerales: [
-        "Coin repos 6 palces",
+        "Coin repos 6 places",
         "Coin salon",
         "Salle de bain",
         "Climatisation: Oui",
@@ -93,10 +93,10 @@ const Logements = () => {
     },
     {
       id: 3,
-      titre: "Logement 5",
+      titre: "Logement n°5",
       description: "Duplex 75m², pour 5 personnes",
       caracteristiquesGenerales: [
-        "Coin repos 8 palces",
+        "Coin repos 8 places",
         "Coin salon",
         "Salle de bain",
         "Climatisation: Oui",
@@ -131,10 +131,10 @@ const Logements = () => {
     },
     {
       id: 4,
-      titre: "Logement 6",
+      titre: "Logement n°6",
       description: "Suite 50m² avec terasse ouverte, pour 2/3 personnes",
       caracteristiquesGenerales: [
-        "Coin repos 4 palces",
+        "Coin repos 4 places",
         "Coin salon",
         "Canapé-lit",
         "TV BBox, 180 chaînes + WIFI",
@@ -169,10 +169,10 @@ const Logements = () => {
     },
     {
       id: 5,
-      titre: "Logement 7",
+      titre: "Logement n°7",
       description: "Suite 75m², pour 5 personnes",
       caracteristiquesGenerales: [
-        "Coin repos 5 palces",
+        "Coin repos 5 places",
         "Coin salon",
         "Canapé-lit",
         "TV BBox, 180 chaînes + WIFI",
@@ -181,7 +181,7 @@ const Logements = () => {
       ],
       chambres: {
         nombreChambre: "3",
-        chambre_1: ["1 lit double 160cm/200cm, 1 lit simple 90/190"],
+        chambre_1: ["1 lit double 160cm/200cm, 1 lit simple 90/190cm"],
         chambre_2: ["1 lit gigogne"],
         chambre_3: ["2 lits simples 90cm/190cm"],
       },
@@ -236,7 +236,8 @@ const Logements = () => {
       <section className="intro-page">
         <h2>Logements</h2>
         <p>
-          Découvrez les logements proposés et réservez celui qui vous convient.
+          Découvrez les 5 logements proposés et réservez celui qui vous
+          convient.
         </p>
       </section>
 

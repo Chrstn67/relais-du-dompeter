@@ -8,6 +8,9 @@ export default function Page() {
       <Link href="/infos-pratiques"></Link>
       <Link href="/autour-de-vous"></Link>
       <Link href="/contact"></Link>
+      <Link href="/mentions-legales"></Link>
+      <Link href="/a-propos"></Link>
+      <Link href="/conditions-generales-d-utilisation"></Link>
     </main>
   );
 }

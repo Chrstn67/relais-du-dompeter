@@ -30,6 +30,12 @@ const LeafletInfo = () => {
       description: "Lundi matin",
     },
     {
+      name: "Office du Tourisme, Molsheim",
+      coordinates: [48.54217585, 7.492266147542871],
+      type: "Office",
+      description: "https://www.ot-molsheim-mutzig.com/",
+    },
+    {
       name: "Gare de Molsheim",
       coordinates: [48.5371514, 7.500266265771813],
       type: "Gare",
@@ -131,6 +137,10 @@ const LeafletInfo = () => {
   const iconMappings = {
     Hotel: {
       iconUrl: "https://cdn-icons-png.flaticon.com/512/675/675942.png",
+      iconSize: [38, 38],
+    },
+    Office: {
+      iconUrl: "https://cdn-icons-png.flaticon.com/512/1/1176.png",
       iconSize: [38, 38],
     },
     Gare: {
