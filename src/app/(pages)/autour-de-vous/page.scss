@@ -119,42 +119,46 @@
       margin-bottom: 0;
     }
 
-    h4 {
-      font-size: 1.5em;
-      color: #333;
-      margin-bottom: 1em;
-    }
-
-    form {
-      margin-bottom: 1em;
-
-      label {
-        display: block;
-        margin-bottom: 0.5em;
-
-        span {
-          font-size: 1.2em;
-          color: #333;
-          margin-right: 0.5em;
-        }
-
-        select {
-          background-color: #cac2c2;
-          font-size: 1rem;
-          padding: 0.5em;
-          outline: 1px solid #ccc;
-          border-radius: 0.3em;
-        }
+    .bus-trajet {
+      h4 {
+        font-size: 1.5em;
+        color: #333;
+        margin-bottom: 1em;
       }
 
-      button {
-        font-size: 1rem;
-        padding: 0.5em 1em;
-        background-color: #007bff;
-        color: #fff;
-        border: none;
-        border-radius: 0.3em;
-        cursor: pointer;
+      form {
+        margin-bottom: 1em;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        label {
+          display: block;
+          margin-bottom: 0.5em;
+
+          span {
+            font-size: 1.2em;
+            color: #333;
+            margin-right: 0.5em;
+          }
+
+          select {
+            background-color: #cac2c2;
+            font-size: 1rem;
+            padding: 0.5em;
+            outline: 1px solid #ccc;
+            border-radius: 0.3em;
+          }
+        }
+
+        button {
+          font-size: 1rem;
+          padding: 0.5em 1em;
+          background-color: #007bff;
+          color: #fff;
+          border: none;
+          border-radius: 0.3em;
+          cursor: pointer;
+        }
       }
     }
 

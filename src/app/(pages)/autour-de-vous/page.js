@@ -165,7 +165,7 @@ const Festivites = () => {
             bus. Des lignes sont mises à votre disposition pour vous permettre
             de voyager en toute sécurité.
           </p>
-          <div>
+          <div className="bus-trajet">
             <h4>Trajet en bus</h4>
             <form onSubmit={handleSubmit}>
               <label>
@@ -174,7 +174,7 @@ const Festivites = () => {
                   value={departure}
                   onChange={(e) => setDeparture(e.target.value)}
                 >
-                  <option value="">Sélectionnez une commune de départ</option>
+                  <option value="">Commune de départ</option>
                   <option value="Avolsheim">Avolsheim</option>
                   <option value="Molsheim">Molsheim</option>
                   <option value="Strasbourg">Strasbourg</option>
@@ -187,9 +187,7 @@ const Festivites = () => {
                   value={destination}
                   onChange={(e) => setDestination(e.target.value)}
                 >
-                  <option value="">
-                    Sélectionnez une commune de destination
-                  </option>
+                  <option value="">Commune de destination</option>
                   <option value="Avolsheim">Avolsheim</option>
                   <option value="Molsheim">Molsheim</option>
                   <option value="Strasbourg">Strasbourg</option>
