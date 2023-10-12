@@ -47,16 +47,16 @@ const Navbar = () => {
               <span>Logements</span>
             </span>
           </Link>
-          <Link href="/infos-pratiques">
-            <span className="text-white cursor-pointer flex items-center space-x-2">
-              <FaInfo />
-              <span>Infos pratiques</span>
-            </span>
-          </Link>
           <Link href="/autour-de-vous">
             <span className="text-white cursor-pointer flex items-center space-x-2">
               <FaMap />
               <span>Autour de vous</span>
+            </span>
+          </Link>
+          <Link href="/infos-pratiques">
+            <span className="text-white cursor-pointer flex items-center space-x-2">
+              <FaInfo />
+              <span>Infos pratiques</span>
             </span>
           </Link>
           <Link href="/contact">
@@ -90,16 +90,16 @@ const Navbar = () => {
               <span>Logements</span>
             </span>
           </Link>
-          <Link href="/infos-pratiques">
-            <span className="block py-2 px-4 text-white cursor-pointer flex items-center space-x-2">
-              <FaInfo />
-              <span>Infos pratiques</span>
-            </span>
-          </Link>
           <Link href="/autour-de-vous">
             <span className="block py-2 px-4 text-white cursor-pointer flex items-center space-x-2">
               <FaMap />
               <span>Autour de vous</span>
+            </span>
+          </Link>
+          <Link href="/infos-pratiques">
+            <span className="block py-2 px-4 text-white cursor-pointer flex items-center space-x-2">
+              <FaInfo />
+              <span>Infos pratiques</span>
             </span>
           </Link>
           <Link href="/contact">

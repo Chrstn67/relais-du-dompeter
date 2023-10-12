@@ -12,6 +12,13 @@
     text-align: center;
     font-size: 2em;
   }
+  div {
+    text-align: center;
+    select {
+      text-align: center;
+      outline: 2px #000000 solid;
+    }
+  }
 }
 
 .leaflet-container {
@@ -23,6 +30,21 @@
 
 .leaflet-popup-content {
   font-size: 1rem;
+  .infos-randos {
+    h6 {
+      font-weight: 400;
+      text-decoration: underline;
+    }
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    img {
+      width: 3em;
+      height: 3em;
+    }
+  }
 
   a {
     color: #0077cc;

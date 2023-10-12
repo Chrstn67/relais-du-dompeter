@@ -2,7 +2,7 @@ export const townMarker = [
   {
     name: "Avolsheim",
     coordinates: [48.5613977, 7.5024652],
-    type: "Hotel",
+    type: "Hôtel",
     description: "Relais du Dompeter",
   },
   {
@@ -115,7 +115,7 @@ export const townMarker = [
 ];
 
 export const iconMappings = {
-  Hotel: {
+  Hôtel: {
     iconUrl: "https://cdn-icons-png.flaticon.com/512/675/675942.png",
     iconSize: [38, 38],
   },

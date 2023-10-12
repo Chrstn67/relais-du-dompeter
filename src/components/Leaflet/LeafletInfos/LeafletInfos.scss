@@ -25,6 +25,13 @@ section {
     margin: 1rem;
     padding: 0.3rem;
   }
+  div {
+    text-align: center;
+    select {
+      text-align: center;
+      outline: 2px #000000 solid;
+    }
+  }
 }
 
 .leaflet-container {

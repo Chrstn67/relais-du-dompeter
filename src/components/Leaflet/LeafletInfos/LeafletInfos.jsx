@@ -10,9 +10,23 @@ import "./LeafletInfos.scss";
 
 const LeafletInfo = () => {
   const [mapCenter, setMapCenter] = useState([48.5613977, 7.5024652]);
+  const [selectedType, setSelectedType] = useState("Tous");
 
   const getCustomIcon = (type) => {
-    return new Icon(iconMappings[type] || iconMappings.Hotel);
+    return new Icon(iconMappings[type] || iconMappings.Hôtel);
+  };
+
+  const typeOptions = ["Tous", ...Object.keys(iconMappings).sort()];
+
+  const filteredMarkers = townMarker.filter(
+    (marker) =>
+      selectedType === "Tous" ||
+      marker.type === selectedType ||
+      marker.type === "Hôtel"
+  );
+
+  const handleTypeChange = (e) => {
+    setSelectedType(e.target.value);
   };
 
   return (
@@ -22,6 +36,16 @@ const LeafletInfo = () => {
         <p>Quelques adresses utiles autour du Relais du Dompeter</p>
       </section>
       <section className="info-carte">
+        <div>
+          <label htmlFor="filter">Filtrer par: </label>
+          <select id="filter" onChange={handleTypeChange} value={selectedType}>
+            {typeOptions.map((type) => (
+              <option key={type} value={type}>
+                {type}
+              </option>
+            ))}
+          </select>
+        </div>
         <MapContainer
           center={mapCenter}
           zoom={13}
@@ -31,11 +55,11 @@ const LeafletInfo = () => {
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           />
-          <Marker position={mapCenter} icon={getCustomIcon("Hotel")}>
-            <Popup>Hôtel</Popup>
+          <Marker position={mapCenter} icon={getCustomIcon("Hôtel")}>
+            <Popup>Relais du Dompeter</Popup>
           </Marker>
           <MarkerClusterGroup>
-            {townMarker.map((city, index) => (
+            {filteredMarkers.map((city, index) => (
               <Marker
                 key={index}
                 position={city.coordinates}

@@ -10,15 +10,80 @@ import "./LeafletTown.scss";
 
 const LeafletTown = () => {
   const [mapCenter, setMapCenter] = useState([48.5613977, 7.5024652]);
-
+  const [selectedType, setSelectedType] = useState("Tous");
   const getCustomIcon = (type) => {
-    return new Icon(iconMappings[type] || iconMappings.Hotel);
+    return new Icon(iconMappings[type] || iconMappings.Hôtel);
+  };
+
+  const typeOptions = ["Tous", ...Object.keys(iconMappings).sort()];
+
+  const filteredMarkers = townMarker.filter(
+    (marker) =>
+      selectedType === "Tous" ||
+      marker.type === selectedType ||
+      marker.type === "Hotel"
+  );
+
+  const renderPopup = (marker) => {
+    if (marker.type === "Randonnée") {
+      // Popup pour les sentiers de randonnée
+      return (
+        <Popup>
+          {marker.name} <br />
+          <a
+            href={marker.description}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Visiter le site
+          </a>
+          <br />
+          <br />
+          <div className="infos-randos">
+            <h6>Infos:</h6>
+            <span>Niveau d'effort: </span>
+            <img src={marker.images.effort} alt="Niveau d'effort" />
+            <span>Niveau de risque: </span>
+            <img src={marker.images.risk} alt="Niveau de risque" />
+            <span>Niveau technique: </span>
+            <img src={marker.images.technique} alt="Niveau technique" />
+          </div>
+        </Popup>
+      );
+    } else {
+      return (
+        <Popup>
+          {marker.name} <br />
+          <a
+            href={marker.description}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Visiter le site
+          </a>
+        </Popup>
+      );
+    }
   };
 
   return (
     <>
       <section className="info-carte">
         <h2>À visiter</h2>
+        <div>
+          <label htmlFor="filter">Filtrer par: </label>
+          <select
+            id="filter"
+            onChange={(e) => setSelectedType(e.target.value)}
+            value={selectedType}
+          >
+            {typeOptions.map((type) => (
+              <option key={type} value={type}>
+                {type}
+              </option>
+            ))}
+          </select>
+        </div>
         <MapContainer
           center={mapCenter}
           zoom={13}
@@ -32,22 +97,13 @@ const LeafletTown = () => {
             <Popup>Hôtel</Popup>
           </Marker>
           <MarkerClusterGroup>
-            {townMarker.map((city, index) => (
+            {filteredMarkers.map((city, index) => (
               <Marker
                 key={index}
                 position={city.coordinates}
                 icon={getCustomIcon(city.type)}
               >
-                <Popup>
-                  {city.name} <br />
-                  <a
-                    href={city.description}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Visiter le site
-                  </a>
-                </Popup>
+                {renderPopup(city)}
               </Marker>
             ))}
           </MarkerClusterGroup>

@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import LeafletTown from "../../../components/Leaflet/LeafletTown/LeafletTown";
-import LeafletWalks from "../../../components/Leaflet/LeafletWalks/LeafletWalks";
 import "./page.scss";
 import { IoMdBicycle } from "react-icons/io";
 import { BiSolidBus } from "react-icons/bi";
@@ -202,7 +201,6 @@ const Festivites = () => {
       </section>
       <section>
         <LeafletTown />
-        <LeafletWalks />
       </section>
       <section className="festivites">
         <h2>Festivités</h2>

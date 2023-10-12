@@ -2,7 +2,7 @@ export const townMarker = [
   {
     name: "2, rue du Dompeter 67120 Avolsheim",
     coordinates: [48.5613977, 7.5024652],
-    type: "Hotel",
+    type: "Hôtel",
     description: "Relais du Dompeter",
   },
   {
@@ -184,7 +184,7 @@ export const townMarker = [
     description: "https://www.citedutrain.com/",
   },
   {
-    name: "Écomusée d'Alsace",
+    name: "ÉcoMusée d'Alsace",
     coordinates: [47.85306625, 7.2871333354354615],
     type: "Musée",
     description: "https://www.ecomusee.alsace/",
@@ -242,13 +242,13 @@ export const townMarker = [
   {
     name: "Zum Loejelgucker",
     coordinates: [48.5945119, 7.4666984],
-    type: "Resto",
+    type: "Restaurant",
     description: "https://aubergedetraenheim.com/",
   },
   {
     name: "Auberge de la Bruche",
     coordinates: [48.5616128, 7.5305405],
-    type: "Resto",
+    type: "Restaurant",
     description:
       "https://www.auberge-bruche.com/fr/restaurant-auberge-bruche-cuisine-gastronomique",
   },
@@ -260,15 +260,49 @@ export const townMarker = [
   },
   {
     name: "Sentier des Casemates",
+
     coordinates: [48.571529, 7.484089],
-    type: "Rando",
+    type: "Randonnée",
     description:
       "https://www.soultz-les-bains.fr/decouvrir/sentier-casemates.htm",
+
+    images: {
+      effort: "images_effort/denivele_1.png",
+      risk: "images_risque/risque_1.png",
+      technique: "images_technique/technique_1.png",
+    },
+  },
+  {
+    name: "Boucle du Champ du Feu",
+
+    coordinates: [48.3943784, 7.2690472],
+    type: "Randonnée",
+    description: "https://www.lechampdufeu.com/",
+
+    images: {
+      effort: "images_effort/denivele_3.png",
+      risk: "images_risque/risque_3.png",
+      technique: "images_technique/technique_3.png",
+    },
+  },
+  {
+    name: "Temple du Donon",
+
+    coordinates: [48.5126166, 7.1644661],
+    type: "Randonnée",
+    description:
+      "https://www.valleedelabruche.fr/fr/decouvrir/visiter/sites-naturels-et-jardins/F215000338_le-donon-montagne-sacree-grandfontaine.html",
+
+    images: {
+      effort: "images_effort/denivele_3.png",
+      risk: "images_risque/risque_3.png",
+      technique: "images_technique/technique_3.png",
+    },
   },
 ];
 
 export const iconMappings = {
-  Hotel: {
+  Hôtel: {
     iconUrl: "https://cdn-icons-png.flaticon.com/512/675/675942.png",
     iconSize: [38, 38],
   },
@@ -309,7 +343,7 @@ export const iconMappings = {
     iconUrl: "https://cdn-icons-png.flaticon.com/512/3928/3928370.png",
     iconSize: [38, 38],
   },
-  Resto: {
+  Restaurant: {
     iconUrl: "https://cdn-icons-png.flaticon.com/512/5766/5766813.png",
     iconSize: [38, 38],
   },
@@ -317,7 +351,7 @@ export const iconMappings = {
     iconUrl: "https://cdn-icons-png.flaticon.com/512/147/147215.png",
     iconSize: [38, 38],
   },
-  Rando: {
+  Randonnée: {
     iconUrl: "https://cdn-icons-png.flaticon.com/512/566/566499.png",
     iconSize: [38, 38],
   },
