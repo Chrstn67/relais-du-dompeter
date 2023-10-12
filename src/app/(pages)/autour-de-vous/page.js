@@ -45,7 +45,6 @@ const Festivites = () => {
       image: "images_festivites/festival_bugatti.jpg",
       site: "https://www.enthousiastes-bugatti-alsace.com/",
     },
-    // Ajoutez d'autres festivités avec leurs informations
   ];
 
   const [departure, setDeparture] = useState("");
@@ -54,9 +53,7 @@ const Festivites = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Ajoutez ici la logique de recherche pour les trajets en bus en fonction de la destination sélectionnée
-    // Par exemple, si vous avez une liste prédéfinie de trajets en bus, filtrez-la en fonction de la destination sélectionnée
-    // Exemple de logique de recherche de trajets en bus (à personnaliser en fonction de vos besoins) :
+
     const busRoutes = [
       {
         departure: "Avolsheim",
@@ -122,7 +119,6 @@ const Festivites = () => {
         trajet:
           "Starsbourg-Marlenheim puis Marlenheim-Wasselone puis Wasselonne-Saverne",
       },
-      // Ajoutez d'autres trajets en bus ici
     ];
 
     const filteredRoutes = busRoutes.filter(

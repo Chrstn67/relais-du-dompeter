@@ -1,9 +1,5 @@
 "use client";
 
-import { Link, Image } from "next/link";
-
-import React, { useState, useEffect } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
 import "./page.scss";
 
 const Accueil = () => {

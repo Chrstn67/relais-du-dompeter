@@ -8,7 +8,7 @@ import {
 import "./page.scss";
 
 const Logements = () => {
-  // Tableau de données pour les logements
+
   const logementsData = [
     {
       id: 1,
@@ -88,7 +88,7 @@ const Logements = () => {
         "images_festivites/coxshow.jpg",
         "images_effort/denivele_1.png",
         "images_effort/denivele_2.png",
-        // Ajoutez d'autres liens vers les photos ici...
+      
       ],
     },
     {
@@ -126,7 +126,7 @@ const Logements = () => {
         "images_festivites/coxshow.jpg",
         "images_effort/denivele_1.png",
         "images_effort/denivele_2.png",
-        // Ajoutez d'autres liens vers les photos ici...
+       
       ],
     },
     {
@@ -164,7 +164,7 @@ const Logements = () => {
         "images_festivites/coxshow.jpg",
         "images_effort/denivele_1.png",
         "images_effort/denivele_2.png",
-        // Ajoutez d'autres liens vers les photos ici...
+       
       ],
     },
     {
@@ -204,7 +204,7 @@ const Logements = () => {
         "images_festivites/coxshow.jpg",
         "images_effort/denivele_1.png",
         "images_effort/denivele_2.png",
-        // Ajoutez d'autres liens vers les photos ici...
+       
       ],
     },
   ];
@@ -304,12 +304,11 @@ const Logements = () => {
                   </li>
                   {Object.keys(logement.chambres).map((chambreKey) => {
                     if (chambreKey !== "nombreChambre") {
-                      const chambreName = chambreKey.replace("_", " "); // Remplace _ par un espace
+                      const chambreName = chambreKey.replace("_", " "); 
                       const chambreDisplayName =
                         chambreName.charAt(0).toUpperCase() +
-                        chambreName.slice(1); // Met en majuscule la première lettre
+                        chambreName.slice(1); 
 
-                      // Divise la chaîne en éléments distincts en utilisant la virgule comme séparateur
                       const chambreItems =
                         logement.chambres[chambreKey][0].split(", ");
 
@@ -320,7 +319,7 @@ const Logements = () => {
                             <React.Fragment key={index}>
                               {item}
                               {index < chambreItems.length - 1 && <br />}{" "}
-                              {/* Ajoute un saut de ligne après chaque élément, sauf le dernier */}
+                             
                             </React.Fragment>
                           ))}
                         </li>

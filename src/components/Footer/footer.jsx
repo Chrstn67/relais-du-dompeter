@@ -1,8 +1,6 @@
 "use client";
 
-import React from "react";
 import Link from "next/link";
-import { FaBars, FaTimes } from "react-icons/fa";
 import "./footer.scss";
 
 const Footer = () => {

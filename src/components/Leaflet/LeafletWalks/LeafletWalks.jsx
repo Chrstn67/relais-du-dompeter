@@ -161,26 +161,20 @@ const WalksMap = () => {
             "Aire de pique-nique dans un endroit calme, entre champs et forêt",
           icon: "Pause",
         },
-        // Ajoutez d'autres attractions le long du chemin
       ],
     },
   ];
 
   const handleWalkSelect = (walkName) => {
-    // Effacez la sélection précédente
     setSelectedWalk(null);
 
-    // Trouvez le sentier sélectionné par son nom
     const selectedWalk = walks.find((walk) => walk.name === walkName);
 
-    // Mettez à jour la nouvelle sélection
     if (selectedWalk) {
       setSelectedWalk(selectedWalk);
 
-      // Obtenez les coordonnées du point de départ du sentier
       const startPoint = selectedWalk.coordinates[0];
 
-      // Mettez à jour la position centrale pour centrer la carte sur le point de départ du sentier
       setMapCenter(startPoint);
     }
   };
