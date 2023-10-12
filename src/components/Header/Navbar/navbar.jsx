@@ -6,7 +6,7 @@ import {
   FaBars,
   FaTimes,
   FaHome,
-  FaCalendar,
+  FaHotel,
   FaInfo,
   FaMap,
   FaEnvelope,
@@ -43,7 +43,7 @@ const Navbar = () => {
           </Link>
           <Link href="/logements">
             <span className="text-white cursor-pointer flex items-center space-x-2">
-              <FaCalendar />
+              <FaHotel />
               <span>Logements</span>
             </span>
           </Link>
@@ -86,7 +86,7 @@ const Navbar = () => {
           </Link>
           <Link href="/logements">
             <span className="block py-2 px-4 text-white cursor-pointer flex items-center space-x-2">
-              <FaCalendar />
+              <FaHotel />
               <span>Logements</span>
             </span>
           </Link>
