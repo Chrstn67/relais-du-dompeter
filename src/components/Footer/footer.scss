@@ -41,9 +41,16 @@
 }
 
 .footer-bottom {
+  display: flex;
   text-align: center;
   padding-top: 1rem;
-  font-size: 0.8rem; /* Utilisation de rem pour la taille de police du bas de page */
+  font-size: 0.8rem;
+  justify-content: space-evenly;
+  align-items: stretch;
+  img {
+    width: 3em;
+    height: 3em;
+  }
 }
 
 /* Responsive Styles */

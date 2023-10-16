@@ -28,6 +28,7 @@ const Footer = () => {
           &copy; {new Date().getFullYear()} Relais du Dompeter. Tous droits
           réservés.
         </p>
+        <img src="Logo.png" alt="Logo développeur"></img>
       </div>
     </footer>
   );

@@ -268,7 +268,7 @@ export const townMarker = [
 
     images: {
       effort: "images_effort/denivele_1.png",
-      risk: "images_risque/risque_1.png",
+      risk: "images_risque/risque_2.png",
       technique: "images_technique/technique_1.png",
     },
   },
@@ -297,6 +297,34 @@ export const townMarker = [
       effort: "images_effort/denivele_3.png",
       risk: "images_risque/risque_3.png",
       technique: "images_technique/technique_3.png",
+    },
+  },
+
+  {
+    name: "Lac de Pierre-Percée",
+
+    coordinates: [48.467604050000006, 6.917869399316366],
+    type: "Randonnée",
+    description: "https://vosges-tourisme.net/lac-de-pierre-percee/",
+
+    images: {
+      effort: "images_effort/denivele_2.png",
+      risk: "images_risque/risque_2.png",
+      technique: "images_technique/technique_2.png",
+    },
+  },
+  {
+    name: "Rocher de Mutzig",
+
+    coordinates: [48.5491928, 7.2400973],
+    type: "Randonnée",
+    description:
+      "https://valleedelabruche.fr/fr/decouvrir/visiter/sites-naturels-et-jardins/F215001259_le-rocher-de-mutzig-lutzelhouse.html",
+
+    images: {
+      effort: "images_effort/denivele_3.png",
+      risk: "images_risque/risque_4.png",
+      technique: "images_technique/technique_4.png",
     },
   },
 ];
