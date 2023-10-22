@@ -260,21 +260,32 @@ export const townMarker = [
   },
   {
     name: "Sentier des Casemates",
-
     coordinates: [48.571529, 7.484089],
     type: "Randonnée",
     description:
       "https://www.soultz-les-bains.fr/decouvrir/sentier-casemates.htm",
 
     images: {
-      effort: "images_effort/denivele_1.png",
+      effort: "images_effort/denivele_2.png",
+      risk: "images_risque/risque_2.png",
+      technique: "images_technique/technique_1.png",
+    },
+  },
+  {
+    name: "Le Scharrach",
+    coordinates: [48.5854131, 7.4939045],
+    type: "Randonnée",
+    description:
+      "https://www.visorando.com/randonnee-circuit-autour-du-scharrach/",
+
+    images: {
+      effort: "images_effort/denivele_2.png",
       risk: "images_risque/risque_2.png",
       technique: "images_technique/technique_1.png",
     },
   },
   {
     name: "Boucle du Champ du Feu",
-
     coordinates: [48.3943784, 7.2690472],
     type: "Randonnée",
     description: "https://www.lechampdufeu.com/",
@@ -287,7 +298,6 @@ export const townMarker = [
   },
   {
     name: "Temple du Donon",
-
     coordinates: [48.5126166, 7.1644661],
     type: "Randonnée",
     description:
@@ -302,7 +312,6 @@ export const townMarker = [
 
   {
     name: "Lac de Pierre-Percée",
-
     coordinates: [48.467604050000006, 6.917869399316366],
     type: "Randonnée",
     description: "https://vosges-tourisme.net/lac-de-pierre-percee/",
@@ -315,7 +324,6 @@ export const townMarker = [
   },
   {
     name: "Rocher de Mutzig",
-
     coordinates: [48.5491928, 7.2400973],
     type: "Randonnée",
     description:

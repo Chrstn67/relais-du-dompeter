@@ -23,7 +23,7 @@ const Navbar = () => {
     <nav
       className="bg-black py-4 px-4 border-b border-gray-700"
       style={{
-        backgroundImage: `url("./images/cours-accueil.jpg")`,
+        backgroundImage: `url("./images/Relais/cours-accueil.jpg")`,
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center bottom",
         backgroundSize: "auto 110%",
@@ -66,7 +66,6 @@ const Navbar = () => {
             </span>
           </Link>
         </div>
-
         <div className="md:hidden ">
           {navOpen ? (
             <FaTimes onClick={toggleNav} className="text-white text-2xl" />

@@ -38,7 +38,7 @@ const Accueil = () => {
         <div className="picture-home">
           <picture>
             <img
-              src="./images/cours-accueil.jpg"
+              src="./images/Relais/cours-accueil.jpg"
               alt="Cour intérieure du Relais du Dompeter"
             ></img>
           </picture>
