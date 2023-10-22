@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import LeafletTown from "../../../components/Leaflet/LeafletTown/LeafletTown";
+import PhotoGallery from "../../../components/PhotoGallery/PhotoGallery";
 import "./page.scss";
 import { IoMdBicycle } from "react-icons/io";
 import { BiSolidBus } from "react-icons/bi";
@@ -135,8 +136,9 @@ const Festivites = () => {
         <p>
           Allez visiter ces endroits touristiques, historiques ou de loisirs !
           <br />
-          Partez à la découverte des plaines alsaciennes et savourez vos pauses
-          en dégustant nos spécialités régionales !
+          Partez à la découverte des plaines alsaciennes, savourez vos pauses en
+          dégustant nos spécialités régionales, participez aux festivités
+          endémiques de notre Alsace !
         </p>
       </section>
       <section className="transports-trajets">
@@ -202,6 +204,14 @@ const Festivites = () => {
       <section>
         <LeafletTown />
       </section>
+      <section className="diaporama-paysage">
+        <h2>Tour d'horizon</h2>
+        <p>Foulez le sol de ces collines bas-rhinoises !</p>
+        <div className="photos-paysages">
+          <PhotoGallery />
+        </div>
+      </section>
+
       <section className="festivites">
         <h2>Festivités</h2>
         <p>
