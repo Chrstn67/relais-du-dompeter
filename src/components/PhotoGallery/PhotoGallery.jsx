@@ -1,5 +1,6 @@
 // PhotoGallery.js
 import React, { useState } from "react";
+import Image from "next/image";
 import photoData from "./PhotoGalleryData";
 import "./PhotoGallery.scss";
 
@@ -22,13 +23,25 @@ const PhotoGallery = () => {
           className="photo-item"
           onClick={() => handleClick(photo)}
         >
-          <img src={photo.imageUrl} alt={photo.title} />
+          <Image
+            src={photo.imageUrl}
+            alt={photo.title}
+            width={300}
+            height={200}
+            layout="responsive"
+          />
         </div>
       ))}
 
       {selectedPhoto && (
         <div className="modal">
-          <img src={selectedPhoto.imageUrl} alt={selectedPhoto.title} />
+          <Image
+            src={selectedPhoto.imageUrl}
+            alt={selectedPhoto.title}
+            width={800}
+            height={500}
+            layout="responsive"
+          />
           <p>{selectedPhoto.title}</p>
           <button onClick={closeGallery}>Fermer</button>
         </div>
