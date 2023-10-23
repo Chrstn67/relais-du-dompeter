@@ -5,10 +5,10 @@ import {
   BsFillArrowLeftSquareFill,
   BsFillArrowRightSquareFill,
 } from "react-icons/bs";
+import Image from "next/legacy/image";
 import "./page.scss";
 
 const Logements = () => {
-
   const logementsData = [
     {
       id: 1,
@@ -88,7 +88,6 @@ const Logements = () => {
         "images_festivites/coxshow.jpg",
         "images_effort/denivele_1.png",
         "images_effort/denivele_2.png",
-      
       ],
     },
     {
@@ -126,7 +125,6 @@ const Logements = () => {
         "images_festivites/coxshow.jpg",
         "images_effort/denivele_1.png",
         "images_effort/denivele_2.png",
-       
       ],
     },
     {
@@ -164,7 +162,6 @@ const Logements = () => {
         "images_festivites/coxshow.jpg",
         "images_effort/denivele_1.png",
         "images_effort/denivele_2.png",
-       
       ],
     },
     {
@@ -204,7 +201,6 @@ const Logements = () => {
         "images_festivites/coxshow.jpg",
         "images_effort/denivele_1.png",
         "images_effort/denivele_2.png",
-       
       ],
     },
   ];
@@ -249,7 +245,7 @@ const Logements = () => {
 
             <div className="carousel">
               {logement.photos.map((photo, photoIndex) => (
-                <img
+                <Image
                   key={photoIndex}
                   src={photo}
                   alt={`Photo ${photoIndex + 1}`}
@@ -304,10 +300,10 @@ const Logements = () => {
                   </li>
                   {Object.keys(logement.chambres).map((chambreKey) => {
                     if (chambreKey !== "nombreChambre") {
-                      const chambreName = chambreKey.replace("_", " "); 
+                      const chambreName = chambreKey.replace("_", " ");
                       const chambreDisplayName =
                         chambreName.charAt(0).toUpperCase() +
-                        chambreName.slice(1); 
+                        chambreName.slice(1);
 
                       const chambreItems =
                         logement.chambres[chambreKey][0].split(", ");
@@ -319,7 +315,6 @@ const Logements = () => {
                             <React.Fragment key={index}>
                               {item}
                               {index < chambreItems.length - 1 && <br />}{" "}
-                             
                             </React.Fragment>
                           ))}
                         </li>

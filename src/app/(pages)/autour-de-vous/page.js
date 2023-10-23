@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import LeafletTown from "../../../components/Leaflet/LeafletTown/LeafletTown";
 import PhotoGallery from "../../../components/PhotoGallery/PhotoGallery";
+import Image from "next/legacy/image";
 import "./page.scss";
 import { IoMdBicycle } from "react-icons/io";
 import { BiSolidBus } from "react-icons/bi";
@@ -238,7 +239,13 @@ const Festivites = () => {
                 <strong>Lieu :</strong> {festivite.lieu}
               </p>
               <p>{festivite.description}</p>
-              <img src={festivite.image} alt={festivite.name} />
+              <Image
+                src={festivite.image}
+                alt={festivite.name}
+                width={10}
+                height={10}
+                layout="responsive"
+              />
             </div>
           ))}
         </div>

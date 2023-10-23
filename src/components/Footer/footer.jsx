@@ -1,6 +1,7 @@
 "use client";
 
-import Link from "next/link";
+import Image from "next/legacy/image";
+
 import "./footer.scss";
 
 const Footer = () => {
@@ -28,7 +29,14 @@ const Footer = () => {
           &copy; {new Date().getFullYear()} Relais du Dompeter. Tous droits
           réservés.
         </p>
-        <img src="Logo.png" alt="Logo développeur"></img>
+        <Image
+          className="logo"
+          src="/Logo.png"
+          alt="Logo développeur"
+          width={10}
+          height={10}
+          layout="responsive"
+        />
       </div>
     </footer>
   );

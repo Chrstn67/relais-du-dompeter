@@ -1,6 +1,6 @@
 // PhotoGallery.js
 import React, { useState } from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import photoData from "./PhotoGalleryData";
 import "./PhotoGallery.scss";
 
