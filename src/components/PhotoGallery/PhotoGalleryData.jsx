@@ -23,6 +23,11 @@ const photoData = [
       "Vue plongeante de Soultz-les-Bains et plaines alsaciennes en fond, vue du sentier des Casemates",
     imageUrl: "images/Promenades/Casemates/vue_slb.jpg",
   },
+  {
+    lieu: "Scharrachbergheim",
+    title: "Vue sur la colline du Scharrach",
+    imageUrl: "images/Promenades/Scharrach/Scharrach.jpg",
+  },
 ];
 
 export default photoData;

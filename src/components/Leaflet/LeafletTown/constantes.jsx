@@ -335,6 +335,18 @@ export const townMarker = [
       technique: "images_technique/technique_4.png",
     },
   },
+  {
+    name: "Plan Incliné de Saint-Louis-Arzviller",
+    coordinates: [48.7149468, 7.2162021],
+    type: "Randonnée",
+    description: "https://www.plan-incline.com/presentation-du-site/",
+
+    images: {
+      effort: "images_effort/denivele_2.png",
+      risk: "images_risque/risque_2.png",
+      technique: "images_technique/technique_2.png",
+    },
+  },
 ];
 
 export const iconMappings = {
