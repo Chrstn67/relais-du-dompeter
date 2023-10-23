@@ -47,9 +47,9 @@ const Logements = () => {
         "Parking: Gratuit",
       ],
       photos: [
-        "images_festivites/coxshow.jpg",
-        "images_effort/denivele_1.png",
-        "images_effort/denivele_2.png",
+        "/images_festivites/coxshow.jpg",
+        "/images_effort/denivele_1.png",
+        "/images_effort/denivele_2.png",
       ],
     },
 
@@ -85,9 +85,9 @@ const Logements = () => {
         "Parking: Gratuit",
       ],
       photos: [
-        "images_festivites/coxshow.jpg",
-        "images_effort/denivele_1.png",
-        "images_effort/denivele_2.png",
+        "/images_festivites/coxshow.jpg",
+        "/images_effort/denivele_1.png",
+        "/images_effort/denivele_2.png",
       ],
     },
     {
@@ -122,9 +122,9 @@ const Logements = () => {
         "Parking: Gratuit",
       ],
       photos: [
-        "images_festivites/coxshow.jpg",
-        "images_effort/denivele_1.png",
-        "images_effort/denivele_2.png",
+        "/images_festivites/coxshow.jpg",
+        "/images_effort/denivele_1.png",
+        "/images_effort/denivele_2.png",
       ],
     },
     {
@@ -159,9 +159,9 @@ const Logements = () => {
         "Parking: Gratuit",
       ],
       photos: [
-        "images_festivites/coxshow.jpg",
-        "images_effort/denivele_1.png",
-        "images_effort/denivele_2.png",
+        "/images_festivites/coxshow.jpg",
+        "/images_effort/denivele_1.png",
+        "/images_effort/denivele_2.png",
       ],
     },
     {
@@ -198,9 +198,9 @@ const Logements = () => {
         "Parking: Gratuit",
       ],
       photos: [
-        "images_festivites/coxshow.jpg",
-        "images_effort/denivele_1.png",
-        "images_effort/denivele_2.png",
+        "/images_festivites/coxshow.jpg",
+        "/images_effort/denivele_1.png",
+        "/images_effort/denivele_2.png",
       ],
     },
   ];
@@ -249,6 +249,9 @@ const Logements = () => {
                   key={photoIndex}
                   src={photo}
                   alt={`Photo ${photoIndex + 1}`}
+                  layout="responsive"
+                  width={300}
+                  height={200}
                   style={{
                     display:
                       photoIndex === currentIndex[logementIndex]
