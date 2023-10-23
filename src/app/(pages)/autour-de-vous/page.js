@@ -16,7 +16,7 @@ const Festivites = () => {
       date: "Mai",
       description:
         "Molsheim devient la capitale de la Cox ! Des centaines de célèbres 'Coccinelles' envahissent la ville le temps d'un week-end ! Venez les voir ! ",
-      image: "images_festivites/coxshow.jpg",
+      image: "/images_festivites/coxshow.jpg",
       site: "https://www.facebook.com/CoxShow",
     },
     {
@@ -25,7 +25,7 @@ const Festivites = () => {
       date: "Le jeudi suivant l'Assomption",
       description:
         "Le Grand Marché Annuel d'Obernai est l'occasion de trouver de nombreuses promotions sur divers objets du quotidien et surtout faire le plein de souvenirs avec des produits locaux !",
-      image: "images_festivites/marche_obernai.jpg",
+      image: "/images_festivites/marche_obernai.jpg",
       site: "https://www.obernai.fr/Fr/Economie/Commerce-artisanat/Marche-annuel.html",
     },
     {
@@ -34,7 +34,7 @@ const Festivites = () => {
       date: "Deux semaines, début Septembre",
       description:
         "La Foire Européenne de Strasbourg accueille des centaines d'exposants venant présenter le fruit de leur talent ! Vibrez au rythme des animations proposées, et découvrez une grande variété de produits de consommation !",
-      image: "images_festivites/foire_europeenne.jpg",
+      image: "/images_festivites/foire_europeenne.jpg",
       site: "https://www.foireurop.com/",
     },
     {
@@ -43,7 +43,7 @@ const Festivites = () => {
       date: "Du Vendredi au Dimanche, le 3ème week-end de Septembre",
       description:
         "Le Festival Bugatti attire chaque année des milliers de touristes et amateurs d'automobiles. Venez découvrir l'histoire fabuleuse de ces voitures rares et exceptionnelles !",
-      image: "images_festivites/festival_bugatti.jpg",
+      image: "/images_festivites/festival_bugatti.jpg",
       site: "https://www.enthousiastes-bugatti-alsace.com/",
     },
   ];

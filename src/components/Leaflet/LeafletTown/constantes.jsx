@@ -266,9 +266,9 @@ export const townMarker = [
       "https://www.soultz-les-bains.fr/decouvrir/sentier-casemates.htm",
 
     images: {
-      effort: "images_effort/denivele_2.png",
-      risk: "images_risque/risque_2.png",
-      technique: "images_technique/technique_1.png",
+      effort: "/images_effort/denivele_2.png",
+      risk: "/images_risque/risque_2.png",
+      technique: "/images_technique/technique_1.png",
     },
   },
   {
@@ -279,9 +279,9 @@ export const townMarker = [
       "https://www.visorando.com/randonnee-circuit-autour-du-scharrach/",
 
     images: {
-      effort: "images_effort/denivele_2.png",
-      risk: "images_risque/risque_2.png",
-      technique: "images_technique/technique_1.png",
+      effort: "/images_effort/denivele_2.png",
+      risk: "/images_risque/risque_2.png",
+      technique: "/images_technique/technique_1.png",
     },
   },
   {
@@ -291,9 +291,9 @@ export const townMarker = [
     description: "https://www.lechampdufeu.com/",
 
     images: {
-      effort: "images_effort/denivele_3.png",
-      risk: "images_risque/risque_3.png",
-      technique: "images_technique/technique_3.png",
+      effort: "/images_effort/denivele_3.png",
+      risk: "/images_risque/risque_3.png",
+      technique: "/images_technique/technique_3.png",
     },
   },
   {
@@ -304,9 +304,9 @@ export const townMarker = [
       "https://www.valleedelabruche.fr/fr/decouvrir/visiter/sites-naturels-et-jardins/F215000338_le-donon-montagne-sacree-grandfontaine.html",
 
     images: {
-      effort: "images_effort/denivele_3.png",
-      risk: "images_risque/risque_3.png",
-      technique: "images_technique/technique_3.png",
+      effort: "/images_effort/denivele_3.png",
+      risk: "/images_risque/risque_3.png",
+      technique: "/images_technique/technique_3.png",
     },
   },
 
@@ -317,9 +317,9 @@ export const townMarker = [
     description: "https://vosges-tourisme.net/lac-de-pierre-percee/",
 
     images: {
-      effort: "images_effort/denivele_2.png",
-      risk: "images_risque/risque_2.png",
-      technique: "images_technique/technique_2.png",
+      effort: "/images_effort/denivele_2.png",
+      risk: "/images_risque/risque_2.png",
+      technique: "/images_technique/technique_2.png",
     },
   },
   {
@@ -330,9 +330,9 @@ export const townMarker = [
       "https://valleedelabruche.fr/fr/decouvrir/visiter/sites-naturels-et-jardins/F215001259_le-rocher-de-mutzig-lutzelhouse.html",
 
     images: {
-      effort: "images_effort/denivele_3.png",
-      risk: "images_risque/risque_4.png",
-      technique: "images_technique/technique_4.png",
+      effort: "/images_effort/denivele_3.png",
+      risk: "/images_risque/risque_4.png",
+      technique: "/images_technique/technique_4.png",
     },
   },
   {
@@ -342,9 +342,9 @@ export const townMarker = [
     description: "https://www.plan-incline.com/presentation-du-site/",
 
     images: {
-      effort: "images_effort/denivele_2.png",
-      risk: "images_risque/risque_2.png",
-      technique: "images_technique/technique_2.png",
+      effort: "/images_effort/denivele_2.png",
+      risk: "/images_risque/risque_2.png",
+      technique: "/images_technique/technique_2.png",
     },
   },
 ];
