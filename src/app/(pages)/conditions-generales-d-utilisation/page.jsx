@@ -4,13 +4,14 @@ import "./page.scss";
 const ConditionsGeneralesUtilisation = () => {
   return (
     <section className="cgu">
-      <h1>Conditions Générales d'Utilisation</h1>
+      <h1>Conditions Générales d&#39;Utilisation</h1>
 
       <h2>1. Acceptation des conditions</h2>
       <p>
         En utilisant ce site web, vous acceptez les présentes conditions
-        générales d'utilisation. Si vous n'êtes pas d'accord avec l'une
-        quelconque de ces conditions, veuillez ne pas utiliser ce site.
+        générales d&#39;utilisation. Si vous n&#39;êtes pas d&#39;accord avec
+        l&#39;une quelconque de ces conditions, veuillez ne pas utiliser ce
+        site.
       </p>
 
       <h2>2. Utilisation du site</h2>
@@ -30,9 +31,9 @@ const ConditionsGeneralesUtilisation = () => {
       <h2>3. Annonces et réservations</h2>
       <p>
         Les annonces sur ce site sont fournies par les utilisateurs. Nous ne
-        pouvons pas garantir l'exactitude des informations fournies. Lorsque
+        pouvons pas garantir l&#39;exactitude des informations fournies. Lorsque
         vous effectuez une réservation, vous acceptez les conditions spécifiques
-        de l'annonce.
+        de l&#39;annonce.
       </p>
 
       <h2>4. Politique de confidentialité</h2>
@@ -45,17 +46,17 @@ const ConditionsGeneralesUtilisation = () => {
       <h2>5. Modifications des conditions</h2>
       <p>
         Nous nous réservons le droit de modifier ces conditions générales
-        d'utilisation à tout moment. Les modifications seront publiées sur le
-        site, et il vous incombe de les consulter régulièrement. En continuant à
-        utiliser le site après de telles modifications, vous acceptez les
-        conditions révisées.
+        d&#39;utilisation à tout moment. Les modifications seront publiées sur
+        le site, et il vous incombe de les consulter régulièrement. En
+        continuant à utiliser le site après de telles modifications, vous
+        acceptez les conditions révisées.
       </p>
 
       <h2>6. Contact</h2>
       <p>
         Si vous avez des questions concernant ces conditions générales
-        d'utilisation, veuillez nous contacter à l'adresse suivante : [adresse
-        e-mail de contact].
+        d&#39;utilisation, veuillez nous contacter à l&#39;adresse suivante :
+        [adresse e-mail de contact].
       </p>
     </section>
   );

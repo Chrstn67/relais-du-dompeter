@@ -41,7 +41,7 @@ const LeafletTown = () => {
           <br />
           <div className="infos-randos">
             <h6>Infos:</h6>
-            <span>Niveau d'effort: </span>
+            <span>Niveau d&#39;effort: </span>
             <img src={marker.images.effort} alt="Niveau d'effort" />
             <span>Niveau de risque: </span>
             <img src={marker.images.risk} alt="Niveau de risque" />

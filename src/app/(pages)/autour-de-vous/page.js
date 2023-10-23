@@ -146,8 +146,8 @@ const Festivites = () => {
         <div className="velo">
           <IoMdBicycle />
           <p>
-            L'Alsace est l'une des régions les plus cyclables de France ! Venez
-            découvrir la région sur des pistes cyclables entretenues et
+            L&#39;Alsace est l&#39;une des régions les plus cyclables de France
+            ! Venez découvrir la région sur des pistes cyclables entretenues et
             sécurisées.
             <br />
             Du Relais, partez en direction des villes de Molsheim, Obernai,
@@ -158,9 +158,9 @@ const Festivites = () => {
         <div className="bus">
           <BiSolidBus />
           <p>
-            Si vous ne souhaitez pas prendre la voiture, vous avez l'option du
-            bus. Des lignes sont mises à votre disposition pour vous permettre
-            de voyager en toute sécurité.
+            Si vous ne souhaitez pas prendre la voiture, vous avez l&#39;option
+            du bus. Des lignes sont mises à votre disposition pour vous
+            permettre de voyager en toute sécurité.
           </p>
           <div className="bus-trajet">
             <h4>Trajet en bus</h4>
@@ -205,7 +205,7 @@ const Festivites = () => {
         <LeafletTown />
       </section>
       <section className="diaporama-paysage">
-        <h2>Tour d'horizon</h2>
+        <h2>Tour d&#39;horizon</h2>
         <p>Foulez le sol de ces collines bas-rhinoises !</p>
         <div className="photos-paysages">
           <PhotoGallery />
@@ -215,8 +215,8 @@ const Festivites = () => {
       <section className="festivites">
         <h2>Festivités</h2>
         <p>
-          Toute l'année est ponctuée de festivités que vous ne trouverez nulle
-          part ailleurs !
+          Toute l&#39;année est ponctuée de festivités que vous ne trouverez
+          nulle part ailleurs !
           <br />
           Venez vous délecter du patrimoine culturel alsacien !
         </p>
@@ -229,7 +229,7 @@ const Festivites = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Plus d'infos
+                Plus d&#39;infos
               </a>
               <p>
                 <strong>Date :</strong> {festivite.date}

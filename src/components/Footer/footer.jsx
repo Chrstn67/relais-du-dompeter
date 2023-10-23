@@ -14,7 +14,7 @@ const Footer = () => {
           <ul>
             <li>
               <Link href="/conditions-generales-d-utilisation">
-                Conditions générales d'utilisation
+                Conditions générales d&#39;utilisation
               </Link>
             </li>
             <li>
