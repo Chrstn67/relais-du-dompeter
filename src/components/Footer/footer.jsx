@@ -35,7 +35,6 @@ const Footer = () => {
           alt="Logo développeur"
           width={10}
           height={10}
-          layout="responsive"
         />
       </div>
     </footer>

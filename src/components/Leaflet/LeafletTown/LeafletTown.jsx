@@ -43,29 +43,35 @@ const LeafletTown = () => {
           <div className="infos-randos">
             <h6>Infos:</h6>
             <span>Niveau d&#39;effort: </span>
-            <Image
-              src={marker.images.effort}
-              alt="Niveau d'effort"
-              width={300}
-              height={200}
-              layout="responsive"
-            />
+            <div>
+              <Image
+                src={marker.images.effort}
+                alt="Niveau d'effort"
+                width={300}
+                height={200}
+                layout="responsive"
+              />
+            </div>
             <span>Niveau de risque: </span>
-            <Image
-              src={marker.images.risk}
-              alt="Niveau de risque"
-              width={300}
-              height={200}
-              layout="responsive"
-            />
+            <div>
+              <Image
+                src={marker.images.risk}
+                alt="Niveau de risque"
+                width={300}
+                height={200}
+                layout="responsive"
+              />
+            </div>
             <span>Niveau technique: </span>
-            <Image
-              src={marker.images.technique}
-              alt="Niveau technique"
-              width={300}
-              height={200}
-              layout="responsive"
-            />
+            <div>
+              <Image
+                src={marker.images.technique}
+                alt="Niveau technique"
+                width={300}
+                height={200}
+                layout="responsive"
+              />
+            </div>
           </div>
         </Popup>
       );
