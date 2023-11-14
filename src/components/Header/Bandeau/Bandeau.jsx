@@ -5,21 +5,21 @@ import "./Bandeau.scss";
 function Banner() {
   const [isBannerVisible, setBannerVisible] = useState(true);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setBannerVisible(false);
-      } else {
-        setBannerVisible(true);
-      }
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (window.scrollY > 0) {
+  //       setBannerVisible(false);
+  //     } else {
+  //       setBannerVisible(true);
+  //     }
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
+  //   window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
   return (
     <div className={`banner ${isBannerVisible ? "visible" : "hidden"}`}>

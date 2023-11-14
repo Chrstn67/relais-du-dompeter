@@ -26,12 +26,12 @@ const Footer = () => {
       </div>
       <div className="footer-bottom">
         <p>
-          &copy; {new Date().getFullYear()} Relais du Dompeter. Tous droits
-          réservés.
+          &copy; {new Date().getFullYear()} Relais du Dompeter. <br /> Tous
+          droits réservés.
         </p>
         <Image
           className="logo"
-          src="/Logo.png"
+          src="/Logo.jpg"
           alt="Logo développeur"
           width={10}
           height={10}
