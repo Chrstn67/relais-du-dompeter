@@ -195,6 +195,26 @@ export const townMarker = [
     type: "Musée",
     description: "https://www.levaisseau.com/",
   },
+
+  {
+    name: "Zénith de Strasbourg",
+    coordinates: [48.5931648, 7.687132837373453],
+    type: "Spectacle",
+    description: "https://www.zenith-strasbourg.fr/",
+  },
+  {
+    name: "Le Dôme de Mutzig",
+    coordinates: [48.5362896, 7.449551535776477],
+    type: "Spectacle",
+    description: "https://www.ledome-mutzig.fr/contact.htm",
+  },
+  {
+    name: "La Laiterie",
+    coordinates: [48.5759771, 7.7294181],
+    type: "Spectacle",
+    description: "https://www.artefact.org/",
+  },
+
   {
     name: "Fort de Mutzig",
     coordinates: [48.5586972, 7.4571909],
@@ -401,6 +421,10 @@ export const iconMappings = {
   },
   Randonnée: {
     iconUrl: "https://cdn-icons-png.flaticon.com/512/566/566499.png",
+    iconSize: [38, 38],
+  },
+  Spectacle: {
+    iconUrl: "https://cdn-icons-png.flaticon.com/512/1598/1598708.png ",
     iconSize: [38, 38],
   },
 };
